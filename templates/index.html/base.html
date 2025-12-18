@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><Z class="MED"></Z>d‑Style Dashboard — Single File</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f5f5f5; margin:0; padding:20px; }
+    header, footer { margin-bottom:20px; }
+    .topbar { display:flex; justify-content:space-between; align-items:center; }
+    .logo { background:#008080; color:#fff; padding:8px 12px; border-radius:6px; font-weight:bold; }
+    .card { background:#fff; padding:16px; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,0.1); margin-bottom:20px; }
+    .grid { display:grid; gap:16px; }
+    .grid-4 { grid-template-columns:repeat(4,1fr); }
+    .grid-12 { grid-template-columns:8fr 4fr; }
+    .stat { display:flex; justify-content:space-between; align-items:center; }
+    .appointments .row, .patients .row { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid #eee; }
+    .patients .item { display:flex; justify-content:space-between; border:1px solid #eee; padding:10px; border-radius:8px; margin-bottom:8px; }
+    aside .btn { display:block; width:100%; padding:10px; margin-bottom:10px; background:#013a1a; color:#fff; text-align:center; border-radius:6px; text-decoration:none; font-weight:bold; }
+    aside .item { display:block; width:100%; text-align:left; padding:10px; border:1px solid #ddd; border-radius:8px; margin-bottom:8px; background:#fafafa; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <div class="logo">Z.MED</div>
+      <div>
+        <h2 style="margin:0;">Clinic Dashboard</h2>
+        <small style="color:#000000;">Welcome back — here's what's happening today</small>
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <input placeholder="Search..." style="padding:8px 12px; border:1px solid #dbeea2; border-radius:6px;" />
+      <div style="width:36px; height:36px; background:#d8dfa5; border-radius:50%; display:flex; justify-content:center; align-items:center;">J.T</div>
+    </div>
+  </header>
+
+  <main class="grid grid-12">
+    <section>
+      <div class="grid grid-4">
+        <div class="card stat"><div><div style="color:#358444; font-size:12px;">Today: Appointments</div><div style="font-size:22px; font-weight:bold;">18</div></div></div>
+        <div class="card stat"><div><div style="color:#3d854f; font-size:12px;">Active Patients</div><div style="font-size:22px; font-weight:bold;">3,214</div></div></div>
+        <div class="card stat"><div><div style="color:#488740; font-size:12px;">New Charts</div><div style="font-size:22px; font-weight:bold;">27</div></div></div>
+        <div class="card stat"><div><div style="color:#43874d; font-size:12px;">Tasks</div><div style="font-size:22px; font-weight:bold;">5</div></div></div>
+      </div>
+
+      <div class="card appointments">
+        <h3>Today's Appointments</h3>
+        <div class="row"><span>08:30 AM — Maria Gomez</span><span>Basic needs</span></div>
+        <div class="row"><span>09:00 AM — John Smith</span><span>Appointment</span></div>
+        <div class="row"><span>09:30 AM —  General Khan</span><span>Check up</span></div>
+        <div class="row"><span>6:07 AM  —  Jeffrey. T</span><span>Medical payments</span></div>
+        <div class="row"><span>10:00 AM — Mr. Jacob</span><span>Pending...</Pending></span></div>
+      </div>
+
+      <div class="card patients">
+        <h3>Recent Patient Charts</h3>
+        <div class="item"><span>Maria Gomez — MRN 001223</span><small>DOB: 1986-03-21</small></div>
+        <div class="item"><span>John Smith — MRN 001224</span><small>DOB: 1974-07-09</small></div>
+        <div class="item"><span> General Khan — MRN 001225</span><small>DOB: ?-?-?</small></div>
+      </div>
+    </section>
+
+    <aside>
+      <div class="card">
+        <h3>Quick Actions</h3>
+        <button class="btn">+ New Visit</button>
+        <button class="btn">+ New Prescription</button>
+        <button class="btn">Message Team</button>
+      </div>
+
+      <div class="card">
+        <h3>Inbox</h3>
+        <div class="item">Lab results —*Maria Gomez</div>
+        <div class="item">Referral —*John Smith</div>
+      </div>
+
+      <div class="card">
+        <h3>Upcoming</h3>
+        <p>10:00 AM — Mr. Jacob( Pending)</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <small style="color:#777;">©Justsahdeey XI</small>
+  </footer>
+</body>
+</html>
